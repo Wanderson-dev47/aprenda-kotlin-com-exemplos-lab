@@ -29,7 +29,7 @@ data class Formacao(val nivel: Nivel, var conteudos: List<ConteudoEducacional>) 
     val inscritos = mutableListOf<Usuario>()
     
     fun obterStringConteudos(): String {
-        return conteudos.joinToString("\n") { conteudo ->
+        return conteudos.joinToString() { conteudo ->
             "Nome do Curso: ${conteudo.nome}\nCarga Horária: ${conteudo.duracao}\nNível: $nivel"
         }
     }
